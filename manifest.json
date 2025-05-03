@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Axiom Pulse Randomizer",
+  "version": "1.0",
+  "description": "Добавляет случайный процент для токенов на Axiom Pulse",
+  "content_scripts": [{
+    "matches": ["https://axiom.trade/pulse*"],
+    "js": ["content-script.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://axiom.trade/*"]
+}
