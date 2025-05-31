@@ -1,13 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "Axiom Pulse Randomizer",
+  "name": "NeuroCoin Exstension",
   "version": "1.0",
   "description": "Добавляет случайный процент для токенов на Axiom Pulse",
+  "action": {
+    "default_popup": "./src/popup/popup.html"
+  },
   "content_scripts": [{
     "matches": ["https://axiom.trade/pulse*"],
-    "js": ["content-script.js"],
+    "js": ["./src/content/content-script.js"],
     "run_at": "document_end"
   }],
-  "permissions": ["activeTab"],
-  "host_permissions": ["https://axiom.trade/*"]
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "storage"
+],
+  "host_permissions": ["https://axiom.trade/*"],
+  "options_page": "./src/options/options.html",
+  "web_accessible_resources": [{
+    "resources": ["./src/settings/settings.js"],
+    "matches": ["<all_urls>"]
+  }]
 }
