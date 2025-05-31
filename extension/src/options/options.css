@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('../../assets/background/background.jpg') center/cover no-repeat fixed;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #fff;
+}
+
+.settings-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: rgba(15, 20, 30, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.sidebar-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    padding: 10px 12px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    background-color: rgba(65, 105, 225, 0.5);
+    color: #fff;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: rgba(25, 30, 40, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.settings-section {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.transparent-select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.transparent-select option {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000000;
+    padding: 10px;
+}
+
+.transparent-select:focus {
+    outline: none;
+    border-color: rgba(65, 105, 225, 0.8);
+    box-shadow: 0 0 0 2px rgba(65, 105, 225, 0.3);
+}
+
+.transparent-select:hover {
+    background-color: rgba(175, 187, 212, 0.2);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.transparent-checkbox {
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.transparent-checkbox:checked {
+    background-color: rgba(65, 105, 225, 0.8);
+}
+
+.transparent-checkbox:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    left: 2px;
+    top: -1px;
+}
+
+.transparent-btn {
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.transparent-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.transparent-btn.danger {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.3);
+}
+
+.transparent-btn.danger:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.import-export-section .transparent-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.import-export-section .transparent-btn:last-child {
+    margin-right: 0;
+}

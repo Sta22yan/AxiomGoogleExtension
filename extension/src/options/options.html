@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="settings-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/icons/icon48.png" alt="Logo" class="sidebar-logo">
+                <h2>Settings</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">Basic</a>
+                <a href="#" class="nav-item">Ещё какие-нибудь</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="settings-section">
+                <h3>Основные параметры</h3>
+                <div class="setting-item">
+                    <label>Язык интерфейса</label>
+                    <select id="language" class="transparent-select">
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <div class="setting-item">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="autoUpdates" class="transparent-checkbox">
+                        <span>Включить автоматические обновления</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Дополнительно</h3>
+                <button id="resetBtn" class="transparent-btn danger">
+                    Reset settings
+                </button>
+                <div class="import-export-section">
+                    <button id="exportBtn" class="transparent-btn">
+                        Export settings
+                    </button>
+                    <button id="importBtn" class="transparent-btn" style="margin-left: 10px;">
+                        Import settings
+                    </button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../settings/settings.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
